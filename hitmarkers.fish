@@ -3,13 +3,14 @@ function play_sound_cue
 end
 
 set -g __postexec_blacklist vim man info perldoc
+set -g __term_hitmarker_script_dir (dirname (realpath (status filename)))
 
 function postexec_sound --on-event fish_postexec
     set saved_status $status
     echo $argv | read -la last_cmd
 
     if test $saved_status -ne 0
-        play_sound_cue "/home/anon/stow/.data/windows-7-error-cue.mp3"
+        play_sound_cue "$__term_hitmarker_script_dir/term-hitmarker-error"
         return
     end
 
@@ -19,7 +20,5 @@ function postexec_sound --on-event fish_postexec
         end
     end
 
-    #set elapsed (math (date +%s) - $__cmd_start_time)
-
-    play_sound_cue "/home/anon/stow/.data/tf2-hit-cue.wav"
+    play_sound_cue "$__term_hitmarker_script_dir/term-hitmarker-hit"
 end
