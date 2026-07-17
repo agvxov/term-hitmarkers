@@ -30,6 +30,6 @@ the base64 encoding is extracted into `/dev/shm/` on startup
 
 If you wish to use your own sound files,
 you could change the paths `mk-sound-vars.pl`,
-install Plug and invoke the `make`;
-or you may create a base64 dump of your files and insert them by hand,
-just make sure to remove newlines.
+install Plug and invoke `make`;
+or you may create a base64 dump of your files and insert them by hand
+(just make sure to remove newlines).
