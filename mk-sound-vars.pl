@@ -36,11 +36,11 @@ my $error_sound = file2base64("data/windows-7-error-cue.mp3");
 if ($mode eq 'bash') {
     print ""
         . "__THM_HIT_SOUND='$hit_sound'\n"
-        . "__THM_ERROR_SOUND='$error_sound'\n"
+        . "__THM_ERROR_SOUND='$error_sound'"
     ;
 } elsif ($mode eq 'fish') {
     print ""
         . "set -g __thm_hit_sound   '$hit_sound'\n"
-        . "set -g __thm_ERROR_SOUND '$error_sound'\n"
+        . "set -g __thm_error_sound '$error_sound'"
     ;
 }

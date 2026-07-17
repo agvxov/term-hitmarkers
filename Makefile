@@ -1,2 +1,3 @@
 main:
-	plug -e sounds <(mk-sound-vars.pl fish) hitmarker
+	plug -g -e sounds <(mk-sound-vars.pl fish) hitmarkers.fish
+	plug -g -e sounds <(mk-sound-vars.pl bash) hitmarkers.bash
