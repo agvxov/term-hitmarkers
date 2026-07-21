@@ -59,3 +59,4 @@ function _init_hitmarkers() {
         printf '%s' $__thm_error_sound | base64 -d > "$__thm_cache_dir/term-hitmarker-error"
     fi
 }
+_init_hitmarkers
