@@ -1,13 +1,13 @@
 # Programs which should not play a sound cue on exit
 declare -ga __postexec_blacklist=(
-	nano
-	vi
-	vim
-	nvim
-	emacsclient
-	man
-	info
-	perldoc
+    nano
+    vi
+    vim
+    nvim
+    emacsclient
+    man
+    info
+    perldoc
     pydoc
     ri
     help
@@ -52,9 +52,9 @@ function __thm_postexec_prompt_hook() {
 PROMPT_COMMAND=__thm_postexec_prompt_hook
 
 function _init_hitmarkers() {
-	if ! [[ -e "$__thm_cache_dir/term-hitmarker-hit" ]]; then
+    if ! [[ -e "$__thm_cache_dir/term-hitmarker-hit" ]]; then
         printf '%s' $__thm_hit_sound | base64 -d > "$__thm_cache_dir/term-hitmarker-hit"
-	fi
+    fi
     if ! [[ -e "$__thm_cache_dir/term-hitmarker-error" ]]; then
         printf '%s' $__thm_error_sound | base64 -d > "$__thm_cache_dir/term-hitmarker-error"
     fi

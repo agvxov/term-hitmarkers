@@ -1,13 +1,13 @@
 # Programs which should not play a sound cue on exit
 set -g __thm_postexec_blacklist \
-	nano \
-	vi \
-	vim \
-	nvim \
-	emacsclient \
-	man \
-	info \
-	perldoc \
+    nano \
+    vi \
+    vim \
+    nvim \
+    emacsclient \
+    man \
+    info \
+    perldoc \
     pydoc \
     ri \
     help
