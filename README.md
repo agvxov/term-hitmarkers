@@ -28,8 +28,12 @@ To minimize latency,
 the base64 encoding is extracted into `/dev/shm/` on startup
 (yes, it makes an audible difference).
 
+Speaking of audible difference,
+don't bother running with under WSL,
+the latency is horrificly large.
+
 If you wish to use your own sound files,
-you could change the paths `mk-sound-vars.pl`,
+you could change the paths in `mk-sound-vars.pl`,
 install Plug and invoke `make`;
 or you may create a base64 dump of your files and insert them by hand
 (just make sure to remove newlines).
